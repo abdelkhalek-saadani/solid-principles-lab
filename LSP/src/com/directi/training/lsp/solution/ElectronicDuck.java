@@ -17,7 +17,7 @@ public class ElectronicDuck implements IDuck, Switchable
         if (!_on) {
             turnOn();
         };
-        System.out.println("Electronic duck is off, can't swim...");
+        System.out.println("Electronic duck swim...");
         
     }
 
