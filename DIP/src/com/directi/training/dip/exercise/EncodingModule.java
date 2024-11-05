@@ -18,9 +18,9 @@ public class EncodingModule
         BufferedWriter writer = null;
         try {
             reader = new BufferedReader(
-                new FileReader("DIP/src/com/directi/training/dip/exercise/beforeEncryption.txt"));
+                new FileReader("/home/gala/Desktop/RT5 Materials/microservices/TP/TP2/SOLID_rev/DIP/src/com/directi/training/dip/exercise/beforeEncryption.txt"));
             writer = new BufferedWriter(
-                new FileWriter("DIP/src/com/directi/training/dip/exercise/afterEncryption.txt"));
+                new FileWriter("/home/gala/Desktop/RT5 Materials/microservices/TP/TP2/SOLID_rev/DIP/src/com/directi/training/dip/exercise/afterEncryption.txt"));
             String aLine;
             while ((aLine = reader.readLine()) != null) {
                 String encodedLine = Base64.getEncoder().encodeToString(aLine.getBytes());
@@ -39,7 +39,7 @@ public class EncodingModule
     public void encodeBasedOnNetworkAndDatabase() throws IOException
     {
         URL url;
-        url = new URL("http", "myfirstappwith.appspot.com", "/index.html");
+        url = new URL("http", "google.com", 80, "/index.html");
         InputStream in;
         in = url.openStream();
         InputStreamReader reader = new InputStreamReader(in);
